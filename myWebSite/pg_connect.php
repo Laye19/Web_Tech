@@ -33,8 +33,8 @@ header('Content-Type: application/json');
               }
 
               $student = pg_fetch_all($result);
-              if(!$student){
-                $student = [];
+              if(!$students){
+                $students = [];
               } 
                 echo json_encode($student);
                 break;
@@ -83,7 +83,7 @@ header('Content-Type: application/json');
                     break;
             }
 
-        pg_close($conn);
+        pg_close($dbconn);
 
 
 ?>
